@@ -2,7 +2,7 @@
 using namespace std;
 
 typedef long long LL;
-const int testCases = 50;
+const int testCases = 100;
 ofstream fout;
 int n, m;
 
@@ -43,28 +43,28 @@ void writeToFile(int from, int to, int l1, int r1, int l2, int r2) {
 int main() {
     srand(time(0));
 
-    // data in 10%, n = 2, 1 <= m <= 50
-    int one = testCases * 10 / 100;
-    writeToFile(1, one, 2, 2, 10, 50);
+    // data in 5%, n = 2, 1 <= m <= 30
+    int one = testCases * 5 / 100;
+    writeToFile(1, one, 2, 2, 25, 30);
 
-    // data in 20%, 2 <= n <= 1000, m = 1
-    int two = testCases * 20 / 100;
-    writeToFile(one + 1, two, 800, 1000, 1, 1);
+    // data in 10%, 2 <= n <= 1000, m = 1
+    int two = testCases * 10 / 100;
+    writeToFile(one + 1, two, 900, 1000, 1, 1);
 
-    // data in 30%, 2 <= n <= 1000, 1 <= m <= 2
-    int three = testCases * 30 / 100;
-    writeToFile(two + 1, three, 800, 1000, 2, 2);
+    // data in 15%, 2 <= n <= 1000, 1 <= m <= 2
+    int three = testCases * 15 / 100;
+    writeToFile(two + 1, three, 900, 1000, 2, 2);
 
-    // data in 50%, 2 <= n <= 5, 1 <= m <= 30
-    int four = testCases * 50 / 100;
-    writeToFile(three + 1, four, 4, 5, 20, 30);
+    // data in 25%, 2 <= n <= 5, 1 <= m <= 30
+    int four = testCases * 25 / 100;
+    writeToFile(three + 1, four, 5, 5, 25, 30);
 
-    // data in 70%, 2 <= n <= 1000, 1 <= m <= 30
-    int five = testCases * 70 / 100;
-    writeToFile(four + 1, five, 800, 1000, 20, 30);
+    // data in 55%, 2 <= n <= 1000, 1 <= m <= 30
+    int five = testCases * 55 / 100;
+    writeToFile(four + 1, five, 900, 1000, 25, 30);
 
     // data in 100%, 2 <= n <= 1000, 1 <= m <= 50
-    writeToFile(five + 1, testCases, 800, 1000, 40, 50);
+    writeToFile(five + 1, testCases, 900, 1000, 43, 50);
 
     return 0;
 }
